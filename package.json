@@ -14,7 +14,7 @@
   "engines": {
     "node": ">=16.0.0 <19.0.0"
   },
-  "author": "",
+  "author": "moregotz",
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "7.21.0",

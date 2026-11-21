@@ -1,18 +1,21 @@
 export default class Entity {
-  list() { }
+  list() {
 
-  get() { }
-
-  create(name) {
-    return createRequest({
-      url: this.URL + '/new-user',
-      method: 'POST',
-      responseType: 'json',
-      body: { name },
-    });
   }
 
-  update() { }
+  get() {
 
-  delete() { }
+  }
+
+  create() {
+
+  }
+
+  update() {
+
+  }
+
+  delete() {
+
+  }
 }

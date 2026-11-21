@@ -28,7 +28,7 @@ app.post("/new-user", async (request, response) => {
   if (Object.keys(request.body).length === 0) {
     const result = {
       status: "error",
-      message: "This name is already taken!",
+      message: "Этот никнейм занят, попробуйте другой!",
     };
     response.status(400).send(JSON.stringify(result)).end();
   }
@@ -49,7 +49,7 @@ app.post("/new-user", async (request, response) => {
   } else {
     const result = {
       status: "error",
-      message: "This name is already taken!",
+      message: "Этот никнейм занят, попробуйте другой!",
     };
     logger.error(`User with name "${name}" already exist`);
     response.status(409).send(JSON.stringify(result)).end();
@@ -71,7 +71,7 @@ wsServer.on("connection", (ws) => {
       [...wsServer.clients]
         .filter((o) => o.readyState === WebSocket.OPEN)
         .forEach((o) => o.send(JSON.stringify(userState)));
-      logger.info(`User with name "${receivedMSG.user.name}" has been deleted`);
+      logger.info(`Пользователь с никнеймом "${receivedMSG.user.name}" был удалён!`);
       return;
     }
     // обработка отправки сообщения
@@ -79,7 +79,7 @@ wsServer.on("connection", (ws) => {
       [...wsServer.clients]
         .filter((o) => o.readyState === WebSocket.OPEN)
         .forEach((o) => o.send(msg, { binary: isBinary }));
-      logger.info("Message sent to all users");
+      logger.info("Сообщение отправлено!");
     }
   });
   [...wsServer.clients]

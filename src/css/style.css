@@ -28,7 +28,7 @@ h1 {
   border-radius: 5px;
   box-sizing: border-box;
   background-color: #fff;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .chat__header {
@@ -45,7 +45,7 @@ h1 {
   text-align: center;
   box-sizing: border-box;
   background-color: #dee2e1;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   margin-bottom: 40px;
   cursor: pointer;
 }
@@ -58,7 +58,7 @@ h1 {
   border: 1px solid #e2e5e9;
   border-radius: 8px;
   display: flex;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 
 }
 
@@ -94,9 +94,39 @@ h1 {
   border-color: #e2e5e9;
 }
 
+.form__group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.form__input {
+  padding-right: 40px;
+}
+
+.send-btn {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #43997e;
+  padding: 5px;
+  transition: opacity 0.2s;
+}
+
+.send-btn:hover {
+  color: #40d5c2;
+}
+
+.send-btn.hidden {
+  display: none;
+}
+
 .chat__userlist {
   flex: 0 0 30%;
-  background-color: #edefec;
+  background-color: #bcd1cdfd;
   border-top-right-radius: 7px;
   border-bottom-right-radius: 7px;
   box-sizing: border-box;
@@ -112,7 +142,12 @@ h1 {
   text-align: center;
   border-radius: 5px;
   margin-bottom: 10px;
-  background-color: #e0e6da;
+  background-color: #f6f8f8;
+}
+
+.chat__user-yourself {
+  color: #eb6050;
+  font-weight: bold;
 }
 
 .message__container {
@@ -122,6 +157,7 @@ h1 {
 }
 
 .message__header {
+  color: #5d9389fd;
   font-size: 14px;
 }
 
@@ -131,7 +167,7 @@ h1 {
 }
 
 .message__container-yourself .message__header {
-  color: #20b1df;
+  color: #ee6868fd;
 }
 
 
